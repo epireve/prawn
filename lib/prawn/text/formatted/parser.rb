@@ -19,6 +19,7 @@ module Prawn
                          "<b>|</b>|" +
                          "<i>|</i>|" +
                          "<u>|</u>|" +
+                         "<p>|</p>|" +
                          "<strikethrough>|</strikethrough>|" +
                          "<sub>|</sub>|" +
                          "<sup>|</sup>|" +
