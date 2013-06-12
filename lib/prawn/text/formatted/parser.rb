@@ -44,13 +44,15 @@ module Prawn
                        :underline => "<u>",
                        :strikethrough => "<strikethrough>",
                        :subscript => "<sub>",
-                       :superscript => "<sup>" }
+                       :superscript => "<sup>",
+                       :paragraph => "<p>" }
           suffixes = { :bold => "</b>",
                        :italic => "</i>",
                        :underline => "</u>",
                        :strikethrough => "</strikethrough>",
                        :subscript => "</sub>",
-                       :superscript => "</sup>" }
+                       :superscript => "</sup>",
+                       :paragraph => "</p>" }
           array.collect do |hash|
             prefix = ""
             suffix = ""
@@ -159,7 +161,7 @@ module Prawn
             when "</sup>"
               styles.delete(:superscript)
             when "</p>"
-              styles
+              styles << '<br>'
             when "</link>", "</a>"
               link = nil
               anchor = nil
