@@ -144,6 +144,8 @@ module Prawn
               styles << :subscript
             when "<sup>"
               styles << :superscript
+            when "<p>"
+              styles
             when "</b>", "</strong>"
               styles.delete(:bold)
             when "</i>", "</em>"
@@ -156,6 +158,8 @@ module Prawn
               styles.delete(:subscript)
             when "</sup>"
               styles.delete(:superscript)
+            when "</p>"
+              styles
             when "</link>", "</a>"
               link = nil
               anchor = nil
